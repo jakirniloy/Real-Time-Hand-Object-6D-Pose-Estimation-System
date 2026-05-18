@@ -1,0 +1,16 @@
+## Real-Time Hand & Object 6D Pose Estimation
+## Requirements — all CPU-friendly, no GPU needed
+
+# Core vision
+opencv-contrib-python>=4.8.0   # includes TrackerCSRT, ORB, solvePnP, drawFrameAxes
+numpy>=1.24
+
+# Rotation math (Euler angles from rotation matrix)
+scipy>=1.10
+
+# Optional — only needed if you want YOLOv8 detection instead of skin-colour:
+# ultralytics>=8.0    # ~6 MB model; run "yolo download model=yolov8n.pt" once
+
+# No mediapipe model files required — skin-colour detection is fully local.
+# If you later download hand_landmarker.task from mediapipe CDN you can swap
+# HandDetector for a mediapipe-based one (see README section 3).
